@@ -36,7 +36,8 @@ class Application(tornado.web.Application):
         ]
 
         tornado.web.Application.__init__(self, handlers, **settings)
-        self.session_manager = session.SessionManager(settings["session_secret"], settings["store_options"],
+        self.session_manager = session.SessionManager(settings["session_secret"],
+                                                      settings["store_options"],
                                                       settings["session_timeout"])
 
 
